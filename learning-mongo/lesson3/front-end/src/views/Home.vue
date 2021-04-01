@@ -16,7 +16,6 @@
 
 <script>
 import axios from 'axios';
-
 export default {
   name: 'home',
   data() {
@@ -31,7 +30,7 @@ export default {
     async getTickets() {
       try {
         let response = await axios.get("/api/tickets");
-        this.tickets = response.data;
+        this.tickets = response.data.tickets;
         return true;
       } catch (error) {
         console.log(error);
