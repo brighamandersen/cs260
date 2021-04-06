@@ -6,7 +6,7 @@ This site explains how websites use certificates issued by a Certificate Authori
 
 When you browse to a website that is secure, your web browser will show that it is using HTTPS and also some form of security indicator, typically a lock icon:
 
-![lock icon](/images/lock-icon.png)
+![lock icon](images/lock-icon.png)
 
 This indicates that the browser has validated the identity of the website using a `certificate`. A certificate is a collection of data that is digitally signed by a `certificate authority`. One important piece of information that is signed is the website's identity, in this case, `www.byu.edu`. Another important piece is the website's `public key`.
 
