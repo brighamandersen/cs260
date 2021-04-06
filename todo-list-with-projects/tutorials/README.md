@@ -4,8 +4,8 @@ Start by cloning this repository.
 
 Next, follow these tutorials:
 
-* Part 1: [Installing Packages](/tutorials/1-installing-packages.md)
+* Part 1: [Installing Packages](1-installing-packages.md)
 
-* Part 2: [Projects](/tutorials/2-projects.md)
+* Part 2: [Projects](2-projects.md)
 
-* Part 3: [Todo Items](/tutorials/3-todo-items.md)
+* Part 3: [Todo Items](3-todo-items.md)
