@@ -4,4 +4,4 @@ Use the following tutorials to learn how to build this app:
 
 * Part 1: [Back End](1-Back-End.md)
 
-* Part 2: [Front End](tutorials/2-Front-End.md)
+* Part 2: [Front End](2-Front-End.md)
