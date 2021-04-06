@@ -16,11 +16,11 @@ In public key cryptography, an organization owns both a `private key` and a `pub
 
 One operation that can be performed with these keys is that someone can encrypt data with the organization's public key, and this can only be decrypted by the organization's private key:
 
-![public key encryption](/images/public-key-encryption.png)
+![public key encryption](images/public-key-encryption.png)
 
 Another operation that can be performed with these keys is that the organization can sign data with its private key, and this can be verified as authentic by anyone with the organization's public key:
 
-![public key signing](/images/public-key-signing.png)
+![public key signing](images/public-key-signing.png)
 
 When DigiCert signs a certificate for BYU, it is attesting that the owner of the `public key` in the certificate has the authority to operate the domain `www.byu.edu`. Since BYU keeps its `private key` secret, it is the only entity that can prove it owns the `public key` listed in the certificate.
 
@@ -34,11 +34,11 @@ Thus when we say a website is `secure`, what we mean is that the identity of the
 
 If you click on the lock icon, you can learn more about what kind of certificate the website is using. In this case, I'm using Firefox, so it shows this:
 
-![certificate dropdown](/images/certificate-dropdown.png)
+![certificate dropdown](images/certificate-dropdown.png)
 
 This doesn't add much new information! It just confirms that the site we are browsing is `www.byu.edu` and that the connection is secure. If you click the arrow, you will see:
 
-![certificate dropdown #2](/images/certificate-dropdown-2.png)
+![certificate dropdown #2](images/certificate-dropdown-2.png)
 
 This adds one new piece of information -- the certificate has been "verified" by DigiCert Inc. This means that DigiCert verified BYU as being the rightful owner of `www.byu.edu` and then issued a certificate to BYU that is signed by DigiCert.
 
@@ -46,7 +46,7 @@ This adds one new piece of information -- the certificate has been "verified" by
 
 Now we'll click `More Information`:
 
-![certificate information](/images/certificate-info.png)
+![certificate information](images/certificate-info.png)
 
 This shows us a little more information. In addition to the website name and the authority that issued the certificate, it shows the expiration date. At the bottom it lists some of the technical details of how encryption is occurring. A class on computer security or cryptography would explain this in more detail, but briefly:
 
@@ -82,7 +82,7 @@ You may notice some websites, such as `lastpass.com` using somewhat stronger enc
 
 There is one more thing to do ... click on `View Certificate`. There is quite a lot you can see in this case, but I will focus on the most important thing:
 
-![certificate-chain](/images/certificate-chain.png)
+![certificate-chain](images/certificate-chain.png)
 
 What you see here is a `certificate chain`. A certificate for `*.byu.edu` was signed by the `DigiCert SHA2 High Assurance Server CA` certificate, which was in turn signed by the `DigiCert High Assurance EV Root CA`. The right-most certificate, the `Digicert Root CA`, signed a certificate for the `DigiCert Server CA`, which in turn signed a certificate for `BYU`. Your web browser validates this entire chain of certificates to make sure everyone is who they say they are.
 
@@ -122,19 +122,19 @@ This situation changed drastically when a new organization, named [Let's Encrypt
 
 Let's Encrypt now provides certificates to 200 million websites. And the vast majority of websites are now encrypted:
 
-![https status](/images/https-status.png)
+![https status](images/https-status.png)
 
 We've made so much progress that Google has talked about [phasing out the lock icon](https://blog.chromium.org/2018/05/evolving-chromes-security-indicators.html), and instead showing "Not Secure" on websites without a certificate.
 
-![chrome-security-indicators](/images/chrome-security-indicators.png)
+![chrome-security-indicators](images/chrome-security-indicators.png)
 
-![chrome-not-secure](/images/chrome-not-secure.png)
+![chrome-not-secure](images/chrome-not-secure.png)
 
 ## Getting a certificate
 
 Get a certificate is really easy. The EFF has created [Certbot](https://certbot.eff.org/) to automatically get and install a certificate for your website. On their web page you can select your web server and OS to get customized instructions for how to use it:
 
-![certbot](/images/certbot.png)
+![certbot](images/certbot.png)
 
 Here are the [instructions for Nginx on Ubuntu 18.04](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx.html). In step 4, use the first command shown, which will automatically configure Nginx with a certificate for all of your Nginx websites.
 
