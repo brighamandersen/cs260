@@ -21,8 +21,8 @@ we will not be covering this part.
 
 We'll cover the Vue CLI in the following lessons:
 
-- [Lesson 1](/tutorials/lesson1.md): Installing and using the Vue CLI
+- [Lesson 1](tutorials/lesson1.md): Installing and using the Vue CLI
 
-- [Lesson 2](/tutorials/lesson2.md): The Architecture of a Vue Application
+- [Lesson 2](tutorials/lesson2.md): The Architecture of a Vue Application
 
-- [Lesson 3](/tutorials/lesson3.md): Building an App
+- [Lesson 3](tutorials/lesson3.md): Building an App
