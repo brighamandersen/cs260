@@ -28,7 +28,21 @@ Get website files on server
     cd ~
     git clone {subdomain_project_repo_name}
 
+
+    ** IF VUE APP - 
+    npm install             (install all front end package dependencies)
+    npm run build           (copies compressed site to 'dist/' directory)
+    cp -rp dist/* /var/www/{subdomain}.brighamband.com/
+
+    ** ELSE (IF NORMAL JS SITE)
     cp -r * /var/www/{subdomain}.brighamband.com/
+
+** IF HAS A BACKEND W/ THAT NEEDS SERVER TO BE RUNNING (LIKE EXPRESS)
+    npm install     (install all back end package dependencies)
+    node {server}.JS    (test that it runs without errors, then break out)
+    forever start {server}.js
+    forever list        (make sure your new process is running)
+
 
 Add HTTPS certification using CertBot
 
