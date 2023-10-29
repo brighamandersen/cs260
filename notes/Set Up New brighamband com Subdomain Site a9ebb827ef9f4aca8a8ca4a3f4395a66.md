@@ -1,10 +1,10 @@
-# Set Up New brighamband.com Subdomain Site
+# Set Up New brighambandersen.com Subdomain Site
 
 Set up server to redirect to your subdomain
 
 ```
 cd /etc/nginx/sites-available
-sudo nano {subdomain}.brighamband.com
+sudo nano {subdomain}.brighambandersen.com
     Add to file
 
     server {
@@ -18,14 +18,14 @@ sudo nano {subdomain}.brighamband.com
         }
     }
 
-sudo ln -s /etc/nginx/sites-available/{subdomain}.brighamband.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/{subdomain}.brighambandersen.com /etc/nginx/sites-enabled/
 ```
 
 Set up new directory for subdomain website files
 
 ```
-sudo mkdir /var/www/{subdomain}.brighamband.com
-sudo chown brighamband /var/www/{subdomain}.brighamband.com
+sudo mkdir /var/www/{subdomain}.brighambandersen.com
+sudo chown brig /var/www/{subdomain}.brighambandersen.com
 
 sudo service nginx reload
 ```
@@ -36,16 +36,16 @@ Get website files on server cd ~ git clone {subdomain_project_repo_name}
 ** IF VUE APP -
 npm install             (install all front end package dependencies)
 npm run build           (copies compressed site to 'dist/' directory)
-cp -rp dist/* /var/www/{subdomain}.brighamband.com/
+cp -rp dist/* /var/www/{subdomain}.brighambandersen.com/
 
 ** ELSE (IF NORMAL JS SITE)
-cp -r * /var/www/{subdomain}.brighamband.com/
+cp -r * /var/www/{subdomain}.brighambandersen.com/
 ```
 
-- * IF HAS A BACKEND W/ THAT NEEDS SERVER TO BE RUNNING (LIKE EXPRESS) npm install (install all back end package dependencies) node {server}.JS (test that it runs without errors, then break out) forever start {server}.js forever list (make sure your new process is running)
+- - IF HAS A BACKEND W/ THAT NEEDS SERVER TO BE RUNNING (LIKE EXPRESS) npm install (install all back end package dependencies) node {server}.JS (test that it runs without errors, then break out) forever start {server}.js forever list (make sure your new process is running)
 
 Add HTTPS certification using CertBot
 
 ```
-sudo certbot --nginx -d {subdomain}.brighamband.com
+sudo certbot --nginx -d {subdomain}.brighambandersen.com
 ```
